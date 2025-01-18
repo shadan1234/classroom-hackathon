@@ -1,11 +1,16 @@
 // lib/screens/signup_screen.dart
 import 'package:classroom_goa_hackathon/commons/custom_button.dart';
 import 'package:classroom_goa_hackathon/commons/custom_textfield.dart';
+import 'package:classroom_goa_hackathon/features/dashboard/dashboard_screen.dart';
+import 'package:classroom_goa_hackathon/features/dashboard/students_dashboard_screen.dart';
+import 'package:classroom_goa_hackathon/features/faculty_dashboard.dart';
+import 'package:classroom_goa_hackathon/models/user_models.dart';
 import 'package:classroom_goa_hackathon/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 
 class SignupScreen extends StatelessWidget {
+    static const String routeName = '/signup';
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -45,6 +50,12 @@ class SignupScreen extends StatelessWidget {
                 text: 'Sign Up',
                 onPressed: () {
                   // Handle sign up logic here
+                  // Navigator.pushNamed(context,'/dashboard_screen');
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>
+                  StudentDashboard()
+                  )
+                  );
+
                 },
               ),
               const SizedBox(height: 20),

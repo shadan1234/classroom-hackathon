@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 
 class LoginScreen extends StatelessWidget {
+    static const String routeName = '/login';
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -39,6 +40,7 @@ class LoginScreen extends StatelessWidget {
                 text: 'Log In',
                 onPressed: () {
                   // Handle login logic here
+                   Navigator.pushNamed(context,'/manage_courses');
                 },
               ),
               const SizedBox(height: 20),

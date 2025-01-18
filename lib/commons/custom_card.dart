@@ -1,4 +1,3 @@
-// lib/components/custom_card.dart
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
@@ -17,27 +16,21 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        elevation: 4,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Row(
-            children: [
-              Icon(icon, size: 40, color: Colors.deepPurple),
-              const SizedBox(width: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  Text(subtitle, style: const TextStyle(fontSize: 14, color: Colors.grey)),
-                ],
-              ),
-            ],
-          ),
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      child: ListTile(
+        leading: Icon(icon, size: 40.0),
+        title: Text(
+          title,
+          style: Theme.of(context).textTheme.bodySmall,
+          overflow: TextOverflow.ellipsis, // Prevent overflow
         ),
+        subtitle: Text(
+          subtitle,
+          style: Theme.of(context).textTheme.bodyMedium,
+          overflow: TextOverflow.ellipsis, // Prevent overflow
+        ),
+        onTap: onTap,
       ),
     );
   }

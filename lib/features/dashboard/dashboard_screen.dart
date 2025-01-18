@@ -6,6 +6,7 @@ import '../../themes/app_theme.dart';
 
 
 class DashboardScreen extends StatelessWidget {
+    static const String routeName = '/dashboard_screen';
   final UserRole userRole;
 
   const DashboardScreen({required this.userRole, super.key});
