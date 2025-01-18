@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:file_picker/file_picker.dart';
 
 class AssignmentDetailsScreen extends StatefulWidget {
   final String title;
@@ -20,11 +21,47 @@ class AssignmentDetailsScreen extends StatefulWidget {
 
 class _AssignmentDetailsScreenState extends State<AssignmentDetailsScreen> {
   bool isSubmitted = false;
+  String? selectedFileName; // Holds the name of the selected PDF file
 
+  // Function to pick a PDF file
+  Future<void> pickPdfFile() async {
+    try {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf'],
+      );
+
+      if (result != null && result.files.isNotEmpty) {
+        setState(() {
+          selectedFileName = result.files.single.name;
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('File selected: ${result.files.single.name}')),
+        );
+      } else {
+        debugPrint("No file selected");
+      }
+    } catch (e) {
+      debugPrint("Error picking file: $e");
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Failed to pick a file.')),
+      );
+    }
+  }
+
+  // Function to simulate file upload
   void uploadAssignment() {
+    if (selectedFileName == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please select a file before uploading!')),
+      );
+      return;
+    }
+
     setState(() {
       isSubmitted = true;
     });
+
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Assignment uploaded successfully!')),
     );
@@ -60,6 +97,22 @@ class _AssignmentDetailsScreenState extends State<AssignmentDetailsScreen> {
               ),
             ),
             const SizedBox(height: 32.0),
+            Center(
+              child: ElevatedButton.icon(
+                onPressed: pickPdfFile,
+                icon: const Icon(Icons.folder_open),
+                label: const Text('Select PDF File'),
+              ),
+            ),
+            const SizedBox(height: 16.0),
+            if (selectedFileName != null)
+              Center(
+                child: Text(
+                  'Selected File: $selectedFileName',
+                  style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+                ),
+              ),
+            const SizedBox(height: 16.0),
             Center(
               child: ElevatedButton.icon(
                 onPressed: isSubmitted ? null : uploadAssignment,

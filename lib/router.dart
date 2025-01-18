@@ -3,6 +3,10 @@ import 'package:classroom_goa_hackathon/features/auth/auth_screen.dart';
 import 'package:classroom_goa_hackathon/features/courses/course_management_system.dart';
 import 'package:classroom_goa_hackathon/features/dashboard/dashboard_screen.dart';
 import 'package:classroom_goa_hackathon/features/dashboard/students_dashboard_screen.dart';
+import 'package:classroom_goa_hackathon/features/faculty/faculty_dashboard_screen.dart';
+import 'package:classroom_goa_hackathon/features/faculty/faculty_mainPage.dart';
+import 'package:classroom_goa_hackathon/features/ta/ta_dashboard_screen.dart';
+import 'package:classroom_goa_hackathon/features/ta/ta_main_page.dart';
 import 'package:classroom_goa_hackathon/models/user_models.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -70,6 +74,27 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
      return MaterialPageRoute(
       settings: routeSettings,
       builder: (_)=>StudentDashboard() );
+       case TADashboardScreen.routeName:
+     return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>TADashboardScreen() );
+      
+       case FacultyDashboard.routeName:
+     return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>FacultyDashboard() );
+
+       case   FacultyDashboardScreen.routeName:
+     return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>FacultyDashboardScreen() );
+      
+        case  TaMainPage.routeName:
+
+     return MaterialPageRoute(
+      settings: routeSettings,
+      builder: (_)=>TaMainPage() );
+
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
