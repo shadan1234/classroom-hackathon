@@ -41,6 +41,7 @@ dependencies:
   file_picker: ^8.1.7
   fl_chart: ^0.70.2
   charts_fl: ^0.0.1
+  syncfusion_flutter_charts: ^28.1.39
 
 dev_dependencies:
   flutter_test:
