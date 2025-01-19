@@ -1,13 +1,14 @@
-import 'package:classroom_goa_hackathon/features/dashboard/profile_screen.dart';
-import 'package:classroom_goa_hackathon/features/faculty/faculty_grading.dart';
-import 'package:classroom_goa_hackathon/features/faculty/student_management.dart';
-import 'package:classroom_goa_hackathon/features/faculty/ta_management_screen.dart';
+
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/dashboard/profile_screen.dart';
+import 'package:grade_pro/features/faculty/faculty_grading.dart';
+import 'package:grade_pro/features/faculty/student_management.dart';
+import 'package:grade_pro/features/faculty/ta_management_screen.dart';
 
 class FacultyDashboardScreen extends StatefulWidget {
   static const String routeName = '/faculty_main';
 
-  const FacultyDashboardScreen({Key? key}) : super(key: key);
+  const FacultyDashboardScreen({super.key});
 
   @override
   _FacultyDashboardScreenState createState() => _FacultyDashboardScreenState();
@@ -20,7 +21,7 @@ class _FacultyDashboardScreenState extends State<FacultyDashboardScreen> {
     const StudentManagementScreen(),
     const TAManagementScreen(),
     const GradesFeedbackScreen(),
-    ProfileTab(),
+    const ProfileTab(),
   ];
 
   @override
@@ -35,7 +36,7 @@ class _FacultyDashboardScreenState extends State<FacultyDashboardScreen> {
           });
         },
         backgroundColor: Colors.blue[50], // Light blue background
-        selectedItemColor: Colors.blue, // Blue for selected items
+        selectedItemColor: Colors.deepPurple, // Blue for selected items
         unselectedItemColor: Colors.grey[600], // Grey for unselected items
         type: BottomNavigationBarType.fixed, // Ensures text is always visible
         items: const [

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OverviewScreen extends StatelessWidget {
-  const OverviewScreen({Key? key}) : super(key: key);
+  const OverviewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,12 +58,12 @@ class OverviewScreen extends StatelessWidget {
       elevation: 4,
       color: Colors.indigo.shade100,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
+      child: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Hello, TA!',
               style: TextStyle(
                 fontSize: 22,
@@ -71,8 +71,8 @@ class OverviewScreen extends StatelessWidget {
                 color: Colors.indigo,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               'Here’s an overview of student submissions and activities for today.',
               style: TextStyle(fontSize: 16, color: Colors.black87),
             ),
@@ -200,12 +200,12 @@ class OverviewScreen extends StatelessWidget {
       elevation: 4,
       color: Colors.orange.shade100,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
+      child: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Upcoming Deadline',
               style: TextStyle(
                 fontSize: 18,
@@ -213,8 +213,8 @@ class OverviewScreen extends StatelessWidget {
                 color: Colors.orange,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               'Assignment 3 is due on 20th Jan, 2025. Make sure to remind students to submit on time!',
               style: TextStyle(fontSize: 16, color: Colors.black87),
             ),

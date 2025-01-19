@@ -135,7 +135,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               ),
             ),
           );
-        }).toList(),
+        }),
       ],
     );
   }
@@ -166,9 +166,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               ),
             ),
           );
-        }).toList(),
+        }),
         const SizedBox(height: 16),
         CustomButton(
+            color: AppTheme.primaryColor,
           text: 'Add Assignment',
           onPressed: () {
             showModalBottomSheet(

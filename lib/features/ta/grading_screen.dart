@@ -7,11 +7,11 @@ class GradingScreen extends StatefulWidget {
   final String courseName;
 
   const GradingScreen({
-    Key? key,
+    super.key,
     required this.studentName,
     required this.assignmentTitle,
     required this.courseName,
-  }) : super(key: key);
+  });
 
   @override
   State<GradingScreen> createState() => _GradingScreenState();

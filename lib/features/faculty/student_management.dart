@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StudentManagementScreen extends StatefulWidget {
-  const StudentManagementScreen({Key? key}) : super(key: key);
+  const StudentManagementScreen({super.key});
 
   @override
   State<StudentManagementScreen> createState() => _StudentManagementScreenState();
@@ -147,15 +147,7 @@ class _StudentManagementScreenState extends State<StudentManagementScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Student Management'),
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF56CCF2), Color(0xFF2F80ED)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-        ),
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

@@ -1,10 +1,10 @@
-import 'package:classroom_goa_hackathon/features/ta/assignment_submission.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/ta/assignment_submission.dart';
 
 class CourseDetailsScreenTA extends StatelessWidget {
   final String courseName;
 
-   CourseDetailsScreenTA({Key? key, required this.courseName}) : super(key: key);
+   CourseDetailsScreenTA({super.key, required this.courseName});
 
   final List<Map<String, String>> assignments = [
     {'title': 'Assignment 1', 'dueDate': '2025-01-20', 'status': 'Pending'},

@@ -1,16 +1,12 @@
-import 'package:classroom_goa_hackathon/features/dashboard/profile_screen.dart';
-import 'package:classroom_goa_hackathon/features/faculty/faculty_dashboard_screen.dart';
-import 'package:classroom_goa_hackathon/features/faculty/overview_screen.dart';
-import 'package:classroom_goa_hackathon/features/faculty/student_management.dart';
-import 'package:classroom_goa_hackathon/features/faculty/ta_management_screen.dart';
-import 'package:classroom_goa_hackathon/features/ta/ta_dashboard_screen.dart';
-import 'package:classroom_goa_hackathon/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/dashboard/profile_screen.dart';
+import 'package:grade_pro/features/faculty/overview_screen.dart';
+import 'package:grade_pro/features/ta/ta_dashboard_screen.dart';
 
 class TaMainPage extends StatefulWidget {
   static const String routeName = '/ta-mainpage';
 
-  const TaMainPage({Key? key}) : super(key: key);
+  const TaMainPage({super.key});
 
   @override
   _TaMainPageState createState() => _TaMainPageState();
@@ -22,7 +18,7 @@ class _TaMainPageState extends State<TaMainPage> {
      const OverviewScreen(),
      TADashboardScreen(),
     
-     ProfileTab(), // Profile Screen
+     const ProfileTab(), // Profile Screen
     // Overview Screen
      // Work-Related Screen
   ];

@@ -1,5 +1,6 @@
-import 'package:classroom_goa_hackathon/features/courses/course_details.dart';
+
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/courses/course_details.dart';
 import '../../commons/custom_button.dart';
 import '../../commons/custom_textfield.dart';
 import '../../themes/app_theme.dart';
@@ -62,6 +63,7 @@ class _CourseManagementScreenState extends State<CourseManagementScreen> {
               ),
               const SizedBox(height: 16),
               CustomButton(
+                  color: AppTheme.primaryColor,
                 text: 'Add Course',
                 onPressed: _addCourse,
               ),

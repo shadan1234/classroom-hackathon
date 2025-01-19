@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TAManagementScreen extends StatefulWidget {
-  const TAManagementScreen({Key? key}) : super(key: key);
+  static const String routeName='/ta_home';
+  const TAManagementScreen({super.key});
 
   @override
   State<TAManagementScreen> createState() => _TAManagementScreenState();
@@ -93,15 +94,7 @@ class _TAManagementScreenState extends State<TAManagementScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TA Management'),
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF56CCF2), Color(0xFF2F80ED)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-        ),
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

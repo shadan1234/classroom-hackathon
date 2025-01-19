@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grade_pro/themes/app_theme.dart';
 import '../../../commons/custom_button.dart';
 import '../../../commons/custom_textfield.dart';
 
@@ -41,6 +42,7 @@ class AddTAStudentModal extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 CustomButton(
+                    color: AppTheme.primaryColor,
                   text: 'Add TA',
                   onPressed: () {
                     if (controller.text.trim().isNotEmpty) {
@@ -50,6 +52,7 @@ class AddTAStudentModal extends StatelessWidget {
                   },
                 ),
                 CustomButton(
+                    color: AppTheme.primaryColor,
                   text: 'Add Student',
                   onPressed: () {
                     if (controller.text.trim().isNotEmpty) {

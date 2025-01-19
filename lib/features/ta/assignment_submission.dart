@@ -1,15 +1,15 @@
-import 'package:classroom_goa_hackathon/features/ta/grading_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/ta/grading_screen.dart';
 
 class AssignmentSubmissionsScreen extends StatelessWidget {
   final String assignmentTitle;
   final String courseName;
 
   AssignmentSubmissionsScreen({
-    Key? key,
+    super.key,
     required this.assignmentTitle,
     required this.courseName,
-  }) : super(key: key);
+  });
 
   final List<Map<String, dynamic>> submissions = [
     {'studentName': 'John Doe', 'submissionDate': '2025-01-18', 'status': 'Pending'},

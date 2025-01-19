@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class GradesFeedbackScreen extends StatefulWidget {
-  const GradesFeedbackScreen({Key? key}) : super(key: key);
+  const GradesFeedbackScreen({super.key});
 
   @override
   State<GradesFeedbackScreen> createState() => _GradesFeedbackScreenState();
@@ -184,9 +184,9 @@ class _GradesFeedbackScreenState extends State<GradesFeedbackScreen> {
                     margin: const EdgeInsets.symmetric(vertical: 8.0),
                     child: ListTile(
                       leading: CircleAvatar(
-                        child: Text(student['grade']),
                         backgroundColor: Colors.blueAccent,
                         foregroundColor: Colors.white,
+                        child: Text(student['grade']),
                       ),
                       title: Text(student['name']),
                       subtitle: Text(student['feedback']),
@@ -224,8 +224,8 @@ class _GradesFeedbackScreenState extends State<GradesFeedbackScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => addOrEditGrade(null),
-        child: const Icon(Icons.add),
         tooltip: 'Add Grade',
+        child: const Icon(Icons.add),
       ),
     );
   }

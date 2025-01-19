@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/auth/auth_screen.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class OnboardingScreen extends StatelessWidget {
   static const String routeName = '/OnboardingScreen';
+
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +17,8 @@ class OnboardingScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.school, size: 100, color: Colors.white),
-              SizedBox(height: 20),
+              const Icon(Icons.school, size: 100, color: Colors.white),
+              const SizedBox(height: 20),
               DefaultTextStyle(
                 style: const TextStyle(
                   fontSize: 24.0,
@@ -36,7 +39,7 @@ class OnboardingScreen extends StatelessWidget {
       ),
       Container(
         color: Colors.greenAccent,
-        child: Center(
+        child: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -57,19 +60,19 @@ class OnboardingScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.feedback, size: 100, color: Colors.white),
-              SizedBox(height: 20),
-              Text(
+              const Icon(Icons.feedback, size: 100, color: Colors.white),
+              const SizedBox(height: 20),
+              const Text(
                 'Provide Feedback\nSeamlessly',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/choice'); // Navigate to Choice Screen
+                  Navigator.pushNamed(context, ChoiceScreen.routeName); // Navigate to Choice Screen
                 },
-                child: Text('Get Started'),
+                child: const Text('Get Started'),
               ),
             ],
           ),
@@ -85,7 +88,7 @@ class OnboardingScreen extends StatelessWidget {
         fullTransitionValue: 600,
         enableLoop: true,
         positionSlideIcon: 0.8,
-        slideIconWidget: Icon(Icons.arrow_forward_ios, color: Colors.white),
+        slideIconWidget: const Icon(Icons.arrow_forward_ios, color: Colors.white),
       ),
     );
   }

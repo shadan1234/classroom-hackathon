@@ -1,6 +1,5 @@
-import 'package:classroom_goa_hackathon/features/dashboard/course_details.dart';
-import 'package:classroom_goa_hackathon/features/ta/course_details.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/ta/course_details.dart';
 
 class TADashboardScreen extends StatelessWidget {
   static const String routeName='/taDashboard_screen';
@@ -10,6 +9,8 @@ class TADashboardScreen extends StatelessWidget {
     {'courseName': 'Physics 201', 'courseCode': 'PHY201'},
     {'courseName': 'Computer Science 301', 'courseCode': 'CS301'},
   ];
+
+   TADashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

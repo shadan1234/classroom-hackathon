@@ -6,11 +6,11 @@ class CourseDetailsScreen extends StatelessWidget {
   final String feedback;
 
   const CourseDetailsScreen({
-    Key? key,
+    super.key,
     required this.courseName,
     required this.grade,
     required this.feedback,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

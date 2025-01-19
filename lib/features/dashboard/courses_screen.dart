@@ -1,4 +1,3 @@
-import 'package:classroom_goa_hackathon/features/dashboard/course_details.dart';
 import 'package:flutter/material.dart';
 
 class CoursesTab extends StatelessWidget {
@@ -7,6 +6,8 @@ class CoursesTab extends StatelessWidget {
     {'title': 'Physics 201', 'status': 'Completed', 'grade': 'B+', 'feedback': 'Needs improvement.'},
     {'title': 'Chemistry 301', 'status': 'Ongoing', 'grade': 'N/A', 'feedback': 'Pending submission.'},
   ];
+
+   CoursesTab({super.key});
 
   @override
   Widget build(BuildContext context) {

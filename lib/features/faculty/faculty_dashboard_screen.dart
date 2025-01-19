@@ -1,12 +1,11 @@
-import 'package:classroom_goa_hackathon/features/faculty/student_management.dart';
-import 'package:classroom_goa_hackathon/features/faculty/ta_management_screen.dart';
-import 'package:classroom_goa_hackathon/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/faculty/student_management.dart';
+import 'package:grade_pro/features/faculty/ta_management_screen.dart';
 
 class FacultyDashboard extends StatelessWidget {
   static const String routeName = '/faculty_dashboard';
 
-  const FacultyDashboard({Key? key}) : super(key: key);
+  const FacultyDashboard({super.key});
 
   Widget buildDashboardCard(
       BuildContext context, IconData icon, String title, VoidCallback onTap) {
@@ -66,7 +65,7 @@ class FacultyDashboard extends StatelessWidget {
             'Student Management',
             () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => StudentManagementScreen()));
+                  MaterialPageRoute(builder: (_) => const StudentManagementScreen()));
             },
           ),
           buildDashboardCard(
@@ -75,7 +74,7 @@ class FacultyDashboard extends StatelessWidget {
             'TA Management',
             () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => TAManagementScreen()));
+                  MaterialPageRoute(builder: (_) => const TAManagementScreen()));
             },
           ),
           buildDashboardCard(

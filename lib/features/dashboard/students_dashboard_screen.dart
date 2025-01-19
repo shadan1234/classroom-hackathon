@@ -6,6 +6,8 @@ import 'grades_tab.dart'; // Import Grades Screen
 
 class StudentDashboard extends StatefulWidget {
   static const String routeName = "/student-dashboard";
+
+  const StudentDashboard({super.key});
   @override
   _StudentDashboardState createState() => _StudentDashboardState();
 }
@@ -18,7 +20,7 @@ class _StudentDashboardState extends State<StudentDashboard> {
     CoursesTab(),       // Courses Screen
     AssignmentsTab(),   // Assignments Screen
     GradesTab(),        // Grades Tab
-    ProfileTab(),       // Profile Screen
+    const ProfileTab(),       // Profile Screen
   ];
 
   // Color Scheme

@@ -1,5 +1,6 @@
-import 'package:classroom_goa_hackathon/features/dashboard/course_details.dart';  
+
 import 'package:flutter/material.dart';
+import 'package:grade_pro/features/dashboard/course_details.dart';
 
 class GradesTab extends StatelessWidget {
   // Sample list of enrolled courses
@@ -8,6 +9,8 @@ class GradesTab extends StatelessWidget {
     {'title': 'Physics', 'grade': 'B+'},
     {'title': 'Computer Science', 'grade': 'A-'},
   ];
+
+   GradesTab({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
-import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:grade_pro/themes/app_theme.dart';
 
 import '../../../commons/custom_button.dart';
 import '../../../commons/custom_textfield.dart';
@@ -81,6 +81,7 @@ Future<void> pickPdfFile() async {
             ),
             const SizedBox(height: 16),
             CustomButton(
+                color: AppTheme.primaryColor,
               text: 'Add Assignment',
               onPressed: () {
                 if (titleController.text.trim().isNotEmpty &&

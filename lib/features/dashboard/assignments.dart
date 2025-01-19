@@ -8,6 +8,8 @@ class AssignmentsTab extends StatelessWidget {
     {'title': 'Assignment 2', 'course': 'Physics 201', 'dueDate': '2025-01-22', 'status': 'Submitted'},
   ];
 
+   AssignmentsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
